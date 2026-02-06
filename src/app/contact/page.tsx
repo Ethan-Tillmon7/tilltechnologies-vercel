@@ -1,0 +1,27 @@
+import type { Metadata } from "next";
+import SectionWrapper from "@/components/common/SectionWrapper";
+import PageHeader from "@/components/common/PageHeader";
+import ContactForm from "@/components/contact/ContactForm";
+import SocialLinks from "@/components/contact/SocialLinks";
+
+export const metadata: Metadata = {
+  title: "Connect | TillTechnologies.ai",
+  description: "Get in touch with Ethan Tillmon.",
+};
+
+export default function ContactPage() {
+  return (
+    <>
+      <SectionWrapper>
+        <PageHeader
+          title="Connect"
+          subtitle="Get in touch — let's build something together."
+        />
+        <ContactForm />
+      </SectionWrapper>
+      <SectionWrapper>
+        <SocialLinks />
+      </SectionWrapper>
+    </>
+  );
+}

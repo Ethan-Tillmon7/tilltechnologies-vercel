@@ -1,0 +1,93 @@
+[
+  {
+    "id": "guided-buying",
+    "title": "Guided Buying Experience",
+    "slug": "guided-buying-experience",
+    "description": "Interactive product recommendation engine built at DataMap, guiding users through a curated buying journey with smart filtering and comparison tools.",
+    "techStack": ["React", "TypeScript", "Node.js", "PostgreSQL"],
+    "thumbnailUrl": "/images/projects/guided-buying.png",
+    "liveUrl": null,
+    "githubUrl": null,
+    "featured": true,
+    "category": "professional",
+    "order": 1
+  },
+  {
+    "id": "recycle-platinum",
+    "title": "RecyclePlatinum",
+    "slug": "recycle-platinum",
+    "description": "E-commerce platform for precious metal recycling services, featuring a streamlined user experience for selling and tracking recycled materials.",
+    "techStack": ["React", "Next.js", "Tailwind CSS"],
+    "thumbnailUrl": "/images/projects/recycle-platinum.png",
+    "liveUrl": null,
+    "githubUrl": null,
+    "featured": true,
+    "category": "professional",
+    "order": 2
+  },
+  {
+    "id": "joshinator-analyzer",
+    "title": "Joshinator Analyzer",
+    "slug": "joshinator-analyzer",
+    "description": "Data analysis tool that processes and visualizes complex datasets with an intuitive interface and powerful analytics capabilities.",
+    "techStack": ["Python", "Data Analysis", "Visualization"],
+    "thumbnailUrl": "/images/projects/joshinator.png",
+    "githubUrl": "https://github.com/Ethan-Tillmon7/joshinator-analyzer",
+    "liveUrl": null,
+    "featured": true,
+    "category": "personal",
+    "order": 3
+  },
+  {
+    "id": "ragent",
+    "title": "RAgent",
+    "slug": "ragent",
+    "description": "An intelligent AI agent leveraging retrieval-augmented generation for enhanced context-aware responses and task automation.",
+    "techStack": ["Python", "LangChain", "RAG", "AI/ML"],
+    "thumbnailUrl": "/images/projects/ragent.png",
+    "githubUrl": "https://github.com/Ethan-Tillmon7/RAgent",
+    "liveUrl": null,
+    "featured": true,
+    "category": "personal",
+    "order": 4
+  },
+  {
+    "id": "letter-links",
+    "title": "Letter Links",
+    "slug": "letter-links",
+    "description": "A word puzzle game that challenges players to connect letters and form words through an engaging, interactive interface.",
+    "techStack": ["JavaScript", "React", "Game Logic"],
+    "thumbnailUrl": "/images/projects/letter-links.png",
+    "githubUrl": "https://github.com/Ethan-Tillmon7/Letter-Links",
+    "liveUrl": null,
+    "featured": true,
+    "category": "personal",
+    "order": 5
+  },
+  {
+    "id": "retro-rumble",
+    "title": "Retro Rumble",
+    "slug": "retro-rumble",
+    "description": "A retro-style fighting game with pixel art graphics, combo systems, and multiplayer support inspired by classic arcade brawlers.",
+    "techStack": ["JavaScript", "Canvas API", "Game Dev"],
+    "thumbnailUrl": "/images/projects/retro-rumble.png",
+    "githubUrl": "https://github.com/Ethan-Tillmon7/Retro-Rumble",
+    "liveUrl": null,
+    "featured": true,
+    "category": "personal",
+    "order": 6
+  },
+  {
+    "id": "styleu",
+    "title": "StyleU",
+    "slug": "styleu",
+    "description": "A fashion-tech application that provides personalized style recommendations and outfit suggestions using AI-driven analysis.",
+    "techStack": ["React", "AI/ML", "Fashion API"],
+    "thumbnailUrl": "/images/projects/styleu.png",
+    "githubUrl": "https://github.com/Ethan-Tillmon7/StyleU",
+    "liveUrl": null,
+    "featured": false,
+    "category": "personal",
+    "order": 7
+  }
+]

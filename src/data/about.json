@@ -1,0 +1,45 @@
+{
+  "bio": "Software engineer with a passion for building interactive, user-centric applications. From AI-powered tools to retro-style games, I love turning ideas into polished digital experiences. When I'm not coding, you'll find me training for my next marathon or exploring new places around the world.",
+  "education": [
+    {
+      "institution": "Texas A&M University",
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "startYear": 2020,
+      "endYear": 2024,
+      "location": "College Station, TX",
+      "highlights": ["Software Engineering", "AI/ML Coursework", "Data Structures & Algorithms"]
+    }
+  ],
+  "placesLived": [
+    { "city": "Houston", "state": "TX", "years": "Born & Raised", "description": "Where it all started" },
+    { "city": "College Station", "state": "TX", "years": "2020–2024", "description": "University years at Texas A&M" },
+    { "city": "The Woodlands", "state": "TX", "years": "Present", "description": "Current home base" }
+  ],
+  "timeline": [
+    {
+      "id": "t1",
+      "date": "2020",
+      "title": "Started at Texas A&M",
+      "description": "Began studying Computer Science",
+      "type": "education",
+      "location": "College Station, TX"
+    },
+    {
+      "id": "t2",
+      "date": "2024",
+      "title": "Graduated from Texas A&M",
+      "description": "Earned BS in Computer Science",
+      "type": "education",
+      "location": "College Station, TX"
+    },
+    {
+      "id": "t3",
+      "date": "2025",
+      "title": "The Woodlands Marathon",
+      "description": "Completed first marathon",
+      "type": "personal",
+      "location": "The Woodlands, TX"
+    }
+  ]
+}

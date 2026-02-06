@@ -1,0 +1,22 @@
+[
+  {
+    "platform": "GitHub",
+    "url": "https://github.com/Ethan-Tillmon7",
+    "icon": "FaGithub"
+  },
+  {
+    "platform": "LinkedIn",
+    "url": "https://linkedin.com/in/ethan-tillmon",
+    "icon": "FaLinkedin"
+  },
+  {
+    "platform": "Instagram",
+    "url": "https://instagram.com/ethantillmon",
+    "icon": "FaInstagram"
+  },
+  {
+    "platform": "Twitter",
+    "url": "https://twitter.com/ethantillmon",
+    "icon": "FaXTwitter"
+  }
+]

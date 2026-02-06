@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Press+Start+2P&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-text: #e9f1e9;
+  --color-background: #020302;
+  --color-primary: #42ba40;
+  --color-secondary: #534a64;
+  --color-accent: #1eae19;
+
+  --font-pixel: "Press Start 2P", cursive;
+  --font-lato: "Lato", sans-serif;
+}
+
+:root {
+  --text: #e9f1e9;
+  --background: #020302;
+  --primary: #42ba40;
+  --secondary: #534a64;
+  --accent: #1eae19;
+}
+
+body {
+  color: var(--text);
+  background: var(--background);
+  font-family: "Lato", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}

@@ -1,0 +1,23 @@
+{
+  "movies": [
+    { "id": "m1", "title": "Interstellar", "subtitle": "Christopher Nolan", "imageUrl": "/images/interests/interstellar.jpg", "rating": 5, "category": "movie" },
+    { "id": "m2", "title": "The Dark Knight", "subtitle": "Christopher Nolan", "imageUrl": "/images/interests/dark-knight.jpg", "rating": 5, "category": "movie" },
+    { "id": "m3", "title": "Inception", "subtitle": "Christopher Nolan", "imageUrl": "/images/interests/inception.jpg", "rating": 5, "category": "movie" },
+    { "id": "m4", "title": "The Social Network", "subtitle": "David Fincher", "imageUrl": "/images/interests/social-network.jpg", "rating": 4, "category": "movie" }
+  ],
+  "books": [
+    { "id": "b1", "title": "Atomic Habits", "subtitle": "James Clear", "imageUrl": "/images/interests/atomic-habits.jpg", "rating": 5, "category": "book" },
+    { "id": "b2", "title": "Clean Code", "subtitle": "Robert C. Martin", "imageUrl": "/images/interests/clean-code.jpg", "rating": 4, "category": "book" },
+    { "id": "b3", "title": "The Pragmatic Programmer", "subtitle": "Hunt & Thomas", "imageUrl": "/images/interests/pragmatic-programmer.jpg", "rating": 4, "category": "book" }
+  ],
+  "music": [
+    { "id": "mu1", "title": "Drake", "subtitle": "Hip-Hop / Rap", "imageUrl": "/images/interests/drake.jpg", "category": "music" },
+    { "id": "mu2", "title": "The Weeknd", "subtitle": "R&B / Pop", "imageUrl": "/images/interests/weeknd.jpg", "category": "music" },
+    { "id": "mu3", "title": "Travis Scott", "subtitle": "Hip-Hop / Rap", "imageUrl": "/images/interests/travis-scott.jpg", "category": "music" }
+  ],
+  "places": [
+    { "id": "p1", "title": "Tokyo, Japan", "subtitle": "Culture & Technology", "imageUrl": "/images/interests/tokyo.jpg", "category": "place" },
+    { "id": "p2", "title": "New York City", "subtitle": "The City That Never Sleeps", "imageUrl": "/images/interests/nyc.jpg", "category": "place" },
+    { "id": "p3", "title": "Austin, TX", "subtitle": "Live Music Capital", "imageUrl": "/images/interests/austin.jpg", "category": "place" }
+  ]
+}

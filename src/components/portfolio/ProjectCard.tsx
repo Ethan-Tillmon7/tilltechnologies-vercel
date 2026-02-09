@@ -23,8 +23,9 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       layout
+      className="h-full"
     >
-      <TiltCard>
+      <TiltCard className="h-full">
         <motion.div
           className="group flex h-full flex-col overflow-hidden rounded-xl border border-secondary/30 bg-background/50"
           whileHover={{

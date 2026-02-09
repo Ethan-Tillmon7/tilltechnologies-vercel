@@ -1,45 +1,103 @@
 {
-  "bio": "Software engineer with a passion for building interactive, user-centric applications. From AI-powered tools to retro-style games, I love turning ideas into polished digital experiences. When I'm not coding, you'll find me training for my next marathon or exploring new places around the world.",
+  "bio": "M.S. IT Management student at Tulane University focused on data, cloud, and practical systems delivery. Product-minded builder with a software engineering foundation and experience delivering client-facing systems — from legacy modernization and workflow digitization to performance optimization and SEO. Comfortable in situations to define problems, iterate quickly, and ship practical solutions. When I'm not coding, you'll find me training for my next marathon or exploring new places.",
   "education": [
     {
-      "institution": "Texas A&M University",
+      "institution": "Tulane University of Louisiana",
+      "degree": "Master of Science",
+      "field": "Information Technology Management",
+      "startYear": 2024,
+      "location": "New Orleans, LA",
+      "highlights": ["Data Science & Cloud Certificate", "GPA: 3.832/4.0", "Expected May 2026"]
+    },
+    {
+      "institution": "Louisiana State University",
       "degree": "Bachelor of Science",
-      "field": "Computer Science",
+      "field": "Computer Science — Software Engineering",
       "startYear": 2020,
       "endYear": 2024,
-      "location": "College Station, TX",
-      "highlights": ["Software Engineering", "AI/ML Coursework", "Data Structures & Algorithms"]
+      "location": "Baton Rouge, LA",
+      "highlights": ["Ogden Honors College", "Tau Kappa Epsilon", "GPA: 3.3/4.0"]
+    },
+    {
+      "institution": "Rockhurst High School",
+      "degree": "High School Diploma",
+      "field": "College Preparatory",
+      "startYear": 2016,
+      "endYear": 2020,
+      "location": "Kansas City, MO",
+      "highlights": []
     }
   ],
   "placesLived": [
-    { "city": "Houston", "state": "TX", "years": "Born & Raised", "description": "Where it all started" },
-    { "city": "College Station", "state": "TX", "years": "2020–2024", "description": "University years at Texas A&M" },
-    { "city": "The Woodlands", "state": "TX", "years": "Present", "description": "Current home base" }
+    { "city": "Kansas City", "state": "MO", "years": "Born", "description": "Where it all started" },
+    { "city": "Leawood", "state": "KS", "years": "2013–2020", "description": "Growing up in the KC metro" },
+    { "city": "Baton Rouge", "state": "LA", "years": "2020–Present", "description": "Home base — LSU & beyond" },
+    { "city": "New Orleans", "state": "LA", "years": "2024–Present", "description": "Graduate studies at Tulane" }
   ],
   "timeline": [
     {
+      "id": "t0",
+      "date": "Jun 2019",
+      "title": "Shipment Unloader at Midland Industries",
+      "description": "Followed processing operations for large shipments and managed sorting of stock within the warehouse (summers 2019–2021)",
+      "type": "career",
+      "location": "Kansas City, MO"
+    },
+    {
       "id": "t1",
-      "date": "2020",
-      "title": "Started at Texas A&M",
-      "description": "Began studying Computer Science",
+      "date": "Aug 2020",
+      "title": "Started at LSU",
+      "description": "Began studying Computer Science (Software Engineering) at Louisiana State University",
       "type": "education",
-      "location": "College Station, TX"
+      "location": "Baton Rouge, LA"
     },
     {
       "id": "t2",
-      "date": "2024",
-      "title": "Graduated from Texas A&M",
-      "description": "Earned BS in Computer Science",
-      "type": "education",
-      "location": "College Station, TX"
+      "date": "Jun 2023",
+      "title": "Technical Intern at DataMap LLC",
+      "description": "Led design, development, and demo of a cloud-based guided buying application for streamlined employee procurement and payment processes",
+      "type": "career",
+      "location": "Leawood, KS"
     },
     {
       "id": "t3",
-      "date": "2025",
-      "title": "The Woodlands Marathon",
-      "description": "Completed first marathon",
-      "type": "personal",
-      "location": "The Woodlands, TX"
+      "date": "Dec 2023",
+      "title": "DataMap Internship Completed",
+      "description": "Executed testing scripts for critical release updates, ensuring performance across client portfolios",
+      "type": "career",
+      "location": "Leawood, KS"
+    },
+    {
+      "id": "t4",
+      "date": "May 2024",
+      "title": "Graduated from LSU",
+      "description": "Earned B.S. in Computer Science (Software Engineering) — Ogden Honors College",
+      "type": "education",
+      "location": "Baton Rouge, LA"
+    },
+    {
+      "id": "t5",
+      "date": "Aug 2024",
+      "title": "Started M.S. at Tulane",
+      "description": "Began M.S. in Information Technology Management with a focus on Data Science & Cloud",
+      "type": "education",
+      "location": "New Orleans, LA"
+    },
+    {
+      "id": "t6",
+      "date": "Nov 2024",
+      "title": "Contracted Developer at Beyond79",
+      "description": "Architected and refactored legacy PHP 5.x codebase to PHP 8, redesigned backend schemas, delivered UI/UX overhauls boosting SEO and engagement",
+      "type": "career",
+      "location": "Leawood, KS"
+    },
+    {
+      "id": "t7",
+      "date": "Aug 2025",
+      "title": "Developer at Vernon LLC",
+      "description": "Supporting a 4-person startup delivering manufacturing process digitization and custom client automations",
+      "type": "career",
+      "location": "Kansas City, MO"
     }
   ]
 }

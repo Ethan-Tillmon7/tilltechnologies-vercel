@@ -2,14 +2,21 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { FaSoundcloud } from "react-icons/fa";
 import interestsData from "@/data/interests.json";
 import type { FavoriteItem } from "@/types";
+import MarathonCountdown from "@/components/health/MarathonCountdown";
+import StravaFeed from "@/components/health/StravaFeed";
+import FitnessGoals from "@/components/health/FitnessGoals";
+import WorldMap from "@/components/travels/WorldMap";
+import PhotoGallery from "@/components/travels/PhotoGallery";
 
 const tabs = [
-  { key: "movies", label: "Movies" },
+  { key: "photography", label: "Photography" },
   { key: "books", label: "Books" },
   { key: "music", label: "Music" },
-  { key: "places", label: "Places" },
+  { key: "health", label: "Health" },
+  { key: "travels", label: "Travels" },
 ] as const;
 
 type TabKey = (typeof tabs)[number]["key"];
@@ -58,15 +65,42 @@ function InterestCard({
   );
 }
 
-export default function InterestTabs() {
-  const [active, setActive] = useState<TabKey>("movies");
+function ArtistTicker() {
+  const artists = interestsData.liveMusic as string[];
+  const separator = "  \u00b7  ";
+  const tickerText = artists.join(separator);
 
-  const items = (interestsData[active] ?? []) as FavoriteItem[];
+  return (
+    <div className="mt-8">
+      <p className="mb-3 text-center text-sm text-text/50">
+        {artists.length} artists seen live and counting
+      </p>
+      <div className="overflow-hidden rounded-xl border border-secondary/30 bg-background/50 py-3">
+        <div className="animate-ticker flex whitespace-nowrap">
+          <span className="px-4 text-sm text-text/60">
+            {tickerText}
+          </span>
+          <span className="px-4 text-sm text-text/60">
+            {tickerText}
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function InterestTabs() {
+  const [active, setActive] = useState<TabKey>("photography");
+
+  const isCard = active === "books";
+  const items = isCard
+    ? ((interestsData[active] ?? []) as FavoriteItem[])
+    : [];
 
   return (
     <div>
       {/* Tab bar */}
-      <div className="mb-8 flex flex-wrap justify-center gap-3">
+      <div className="mb-8 flex flex-wrap gap-3">
         {tabs.map((tab) => (
           <button
             key={tab.key}
@@ -82,19 +116,112 @@ export default function InterestTabs() {
         ))}
       </div>
 
-      {/* Grid */}
+      {/* Content */}
       <AnimatePresence mode="wait">
-        <motion.div
-          key={active}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-        >
-          {items.map((item, i) => (
-            <InterestCard key={item.id} item={item} index={i} />
-          ))}
-        </motion.div>
+        {active === "photography" && (
+          <motion.div
+            key="photography"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            {(interestsData.photography as { src: string; alt: string }[]).length === 0 ? (
+              <div className="rounded-xl border border-secondary/30 bg-background/50 p-8 text-center">
+                <p className="text-text/50">
+                  Photography gallery coming soon — check back for snapshots!
+                </p>
+              </div>
+            ) : (
+              <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
+                {(interestsData.photography as { src: string; alt: string }[]).map((photo, i) => (
+                  <motion.div
+                    key={photo.src}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.05 }}
+                    className="mb-4 overflow-hidden rounded-xl border border-secondary/30"
+                  >
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      className="w-full"
+                    />
+                  </motion.div>
+                ))}
+              </div>
+            )}
+          </motion.div>
+        )}
+
+        {active === "music" && (
+          <motion.div
+            key="music"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <h3 className="mb-4 font-pixel text-xs text-primary">
+              Favorite Songs
+            </h3>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {(interestsData.music as FavoriteItem[]).map((item, i) => (
+                <InterestCard key={item.id} item={item} index={i} />
+              ))}
+            </div>
+            <ArtistTicker />
+
+            <a
+              href="https://soundcloud.com/thanillmon?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 flex items-center justify-center gap-2 text-sm text-text/50 transition-colors hover:text-primary"
+            >
+              <FaSoundcloud size={20} />
+              <span>Follow me on SoundCloud</span>
+            </a>
+          </motion.div>
+        )}
+
+        {active === "health" && (
+          <motion.div
+            key="health"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="space-y-10"
+          >
+            <MarathonCountdown />
+            <StravaFeed />
+            <FitnessGoals />
+          </motion.div>
+        )}
+
+        {active === "travels" && (
+          <motion.div
+            key="travels"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="space-y-10"
+          >
+            <WorldMap />
+            <PhotoGallery />
+          </motion.div>
+        )}
+
+        {isCard && (
+          <motion.div
+            key={active}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+          >
+            {items.map((item, i) => (
+              <InterestCard key={item.id} item={item} index={i} />
+            ))}
+          </motion.div>
+        )}
       </AnimatePresence>
     </div>
   );

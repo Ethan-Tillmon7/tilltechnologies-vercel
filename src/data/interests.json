@@ -1,19 +1,46 @@
 {
-  "movies": [
-    { "id": "m1", "title": "Interstellar", "subtitle": "Christopher Nolan", "imageUrl": "/images/interests/interstellar.jpg", "rating": 5, "category": "movie" },
-    { "id": "m2", "title": "The Dark Knight", "subtitle": "Christopher Nolan", "imageUrl": "/images/interests/dark-knight.jpg", "rating": 5, "category": "movie" },
-    { "id": "m3", "title": "Inception", "subtitle": "Christopher Nolan", "imageUrl": "/images/interests/inception.jpg", "rating": 5, "category": "movie" },
-    { "id": "m4", "title": "The Social Network", "subtitle": "David Fincher", "imageUrl": "/images/interests/social-network.jpg", "rating": 4, "category": "movie" }
-  ],
+  "photography": [],
   "books": [
-    { "id": "b1", "title": "Atomic Habits", "subtitle": "James Clear", "imageUrl": "/images/interests/atomic-habits.jpg", "rating": 5, "category": "book" },
-    { "id": "b2", "title": "Clean Code", "subtitle": "Robert C. Martin", "imageUrl": "/images/interests/clean-code.jpg", "rating": 4, "category": "book" },
-    { "id": "b3", "title": "The Pragmatic Programmer", "subtitle": "Hunt & Thomas", "imageUrl": "/images/interests/pragmatic-programmer.jpg", "rating": 4, "category": "book" }
+    { "id": "b1", "title": "Catch-22", "subtitle": "Joseph Heller", "imageUrl": "/images/interests/catch-22.jpg", "category": "book" },
+    { "id": "b2", "title": "The Catcher in the Rye", "subtitle": "J.D. Salinger", "imageUrl": "/images/interests/catcher-rye.jpg", "category": "book" },
+    { "id": "b3", "title": "The Great Gatsby", "subtitle": "F. Scott Fitzgerald", "imageUrl": "/images/interests/great-gatsby.jpg", "category": "book" },
+    { "id": "b4", "title": "When Breath Becomes Air", "subtitle": "Paul Kalanithi", "imageUrl": "/images/interests/breath-becomes-air.jpg", "category": "book" },
+    { "id": "b5", "title": "Into the Wild", "subtitle": "Jon Krakauer", "imageUrl": "/images/interests/into-the-wild.jpg", "category": "book" },
+    { "id": "b6", "title": "Project Hail Mary", "subtitle": "Andy Weir", "imageUrl": "/images/interests/hail-mary.jpg", "category": "book" },
+    { "id": "b7", "title": "Greenlights", "subtitle": "Matthew McConaughey", "imageUrl": "/images/interests/greenlights.jpg", "category": "book" },
+    { "id": "b8", "title": "12 Rules for Life", "subtitle": "Jordan B. Peterson", "imageUrl": "/images/interests/12-rules.jpg", "category": "book" },
+    { "id": "b9", "title": "1984", "subtitle": "George Orwell", "imageUrl": "/images/interests/1984.jpg", "category": "book" },
+    { "id": "b10", "title": "The Curious Incident of the Dog in the Night-Time", "subtitle": "Mark Haddon", "imageUrl": "/images/interests/curious-incident.jpg", "category": "book" }
   ],
   "music": [
-    { "id": "mu1", "title": "Drake", "subtitle": "Hip-Hop / Rap", "imageUrl": "/images/interests/drake.jpg", "category": "music" },
-    { "id": "mu2", "title": "The Weeknd", "subtitle": "R&B / Pop", "imageUrl": "/images/interests/weeknd.jpg", "category": "music" },
-    { "id": "mu3", "title": "Travis Scott", "subtitle": "Hip-Hop / Rap", "imageUrl": "/images/interests/travis-scott.jpg", "category": "music" }
+    { "id": "mu1", "title": "For No One", "subtitle": "The Beatles", "imageUrl": "/images/interests/beatles.jpg", "rating": 5, "category": "music" },
+    { "id": "mu2", "title": "Goodbye Yellow Brick Road", "subtitle": "Elton John", "imageUrl": "/images/interests/elton-john.jpg", "rating": 5, "category": "music" },
+    { "id": "mu3", "title": "Lover of the Light", "subtitle": "Mumford & Sons", "imageUrl": "/images/interests/mumford.jpg", "rating": 5, "category": "music" }
+  ],
+  "liveMusic": [
+    "Anyma", "Amelie Lens", "ATliens", "A Hundred Drums", "Alleycvt (x2)", "Ashe",
+    "Barely Alive", "Bawldy", "Beltran", "Ben Sterling", "Big Wild", "Black Tiger Sex Machine", "Blanke AEONMODE", "Boogie T",
+    "California Honeydrops", "Calvin Harris", "Cannabliss", "Caspa", "Carnage", "Chef Boyarbeatz", "Cherub", "Claptone", "Cloonee (x3)", "Coco & Breezy", "Crank-dat (x2)",
+    "David Guetta", "Deorro", "Dewey", "Disco Lines (x2)", "Distinct Motive", "Dom Dolla", "Dr French", "Drinkyourwater",
+    "Eagles", "Eazybaked (x2)", "Elohim", "Eric Prydz", "Excision", "Flume", "Flux Pavilion", "Fly Bass", "Fred Again...", "Future Birds",
+    "Ganja White Night", "Gentlemen's Club", "G Jones", "Gmur", "GriZ", "Gryffin",
+    "Hairitage", "Hippie Sabotage", "Hol! (x2)",
+    "Its Murph (x2)",
+    "J Ribbon", "John Summit", "Joel Corry", "Juice WRLD", "Justin Bieber",
+    "Kenny Chesney", "Kevin Gates", "Kyokee",
+    "Level Up (x2)", "Levity", "Lil Baby", "Lil Mosey", "Lil Uzi", "Louis the Child", "Loud Luxury", "Lucii (x2)", "Lumasi",
+    "MadeInTYO", "Maddy O'Neal", "Mahogany", "Malaa", "Mau P", "Maze", "Matroda", "Megan Moroney", "Mersiv (x3)", "Midnight Tyrannosaurus", "Modest Mouse", "MPH UK", "Mumford and Sons",
+    "NGHTMRE", "Ne-Yo", "Noah Kahan", "Nora en Pure", "Nostalgix",
+    "Ookay", "Of the Trees", "Opiuo",
+    "Peekaboo", "Phiso", "Pigeons Playing Ping Pong", "Porter Robinson", "Pretty Lights (x2)",
+    "Ray Volpe", "Reaper", "Recondite", "Red Hot Chili Peppers", "Rezz (x2)", "Rivo",
+    "Saka", "San Pacho", "Sara Landry", "Seth David", "Ship Wrek", "Sippy", "Skrillex", "Ski Mask the Slump God", "Smoakland", "Space Wzrd (x2)", "Steller", "Subtronics (x6)", "Summer Ray", "SZA",
+    "Tape B (x4)", "Taylor Swift", "Tiësto (x2)", "Tove Lo", "Thundercat", "Travis Scott (x3)", "Truth", "The Afternooners", "The Bends", "The Pixies", "The Stews", "Troyboi",
+    "Ubur Dub",
+    "Waka Flocka Flame", "Widdler", "Wiz Khalifa", "Westend", "Wraz", "Wuki",
+    "Xandra",
+    "Yookie",
+    "Zac Brown Band", "Zealr", "Zeds Dead (x2)"
   ],
   "places": [
     { "id": "p1", "title": "Tokyo, Japan", "subtitle": "Culture & Technology", "imageUrl": "/images/interests/tokyo.jpg", "category": "place" },

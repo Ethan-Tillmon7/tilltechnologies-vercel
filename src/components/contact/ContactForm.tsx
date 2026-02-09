@@ -47,8 +47,9 @@ export default function ContactForm() {
     >
       <div>
         <input
-          {...register("name", { required: "Name is required" })}
+          {...register("name", { required: "Name is required", maxLength: { value: 200, message: "Name is too long" } })}
           placeholder="Your Name"
+          maxLength={200}
           className={inputClasses}
         />
         {errors.name && (
@@ -60,6 +61,7 @@ export default function ContactForm() {
         <input
           {...register("email", {
             required: "Email is required",
+            maxLength: { value: 320, message: "Email is too long" },
             pattern: {
               value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
               message: "Invalid email",
@@ -67,6 +69,7 @@ export default function ContactForm() {
           })}
           type="email"
           placeholder="Your Email"
+          maxLength={320}
           className={inputClasses}
         />
         {errors.email && (
@@ -76,8 +79,9 @@ export default function ContactForm() {
 
       <div>
         <input
-          {...register("subject", { required: "Subject is required" })}
+          {...register("subject", { required: "Subject is required", maxLength: { value: 500, message: "Subject is too long" } })}
           placeholder="Subject"
+          maxLength={500}
           className={inputClasses}
         />
         {errors.subject && (
@@ -87,8 +91,9 @@ export default function ContactForm() {
 
       <div>
         <textarea
-          {...register("message", { required: "Message is required" })}
+          {...register("message", { required: "Message is required", maxLength: { value: 5000, message: "Message is too long" } })}
           placeholder="Your Message"
+          maxLength={5000}
           rows={5}
           className={`${inputClasses} resize-none`}
         />

@@ -26,15 +26,6 @@ export default function Hero() {
         className="relative z-10 text-center"
       >
         <TypewriterHeader />
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 4, duration: 0.8 }}
-          className="mt-6 text-lg text-text/60 sm:text-xl"
-        >
-          Software Engineer &middot; Builder &middot; Runner
-        </motion.p>
       </motion.div>
 
       {/* Scroll indicator */}

@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
 import SectionWrapper from "@/components/common/SectionWrapper";
-import PageHeader from "@/components/common/PageHeader";
+import PageContent from "@/components/common/PageContent";
 import InterestTabs from "@/components/interests/InterestTabs";
 
 export const metadata: Metadata = {
   title: "Interests | TillTechnologies.ai",
-  description: "Favorite movies, books, music, and places.",
+  description: "Music, photography, fitness, travels — some things that keep me going",
 };
 
 export default function InterestsPage() {
   return (
     <SectionWrapper>
-      <PageHeader
+      <PageContent
         title="Interests"
-        subtitle="Favorite movies, books, music, and places."
-      />
-      <InterestTabs />
+        subtitle="Music, photography, fitness, travels — some things that keep me going"
+      >
+        <InterestTabs />
+      </PageContent>
     </SectionWrapper>
   );
 }

@@ -10,7 +10,7 @@ export default function PlacesLived() {
       <h2 className="mb-8 font-pixel text-sm text-primary sm:text-base">
         Places I&apos;ve Lived
       </h2>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {aboutData.placesLived.map((place, i) => (
           <motion.div
             key={place.city}

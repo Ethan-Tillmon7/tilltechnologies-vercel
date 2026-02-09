@@ -46,3 +46,71 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent);
 }
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  animation: ticker 40s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Subtle floating particles background */
+@keyframes float-up {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(20px);
+    opacity: 0;
+  }
+}
+
+.bg-particles {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-particles span {
+  position: absolute;
+  bottom: -4px;
+  display: block;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: var(--primary);
+  opacity: 0;
+  animation: float-up linear infinite;
+}
+
+.bg-particles span:nth-child(1) { left: 8%; animation-duration: 22s; animation-delay: 0s; width: 2px; height: 2px; }
+.bg-particles span:nth-child(2) { left: 18%; animation-duration: 28s; animation-delay: 4s; width: 1px; height: 1px; }
+.bg-particles span:nth-child(3) { left: 32%; animation-duration: 25s; animation-delay: 2s; width: 3px; height: 3px; }
+.bg-particles span:nth-child(4) { left: 45%; animation-duration: 30s; animation-delay: 6s; width: 1px; height: 1px; }
+.bg-particles span:nth-child(5) { left: 55%; animation-duration: 20s; animation-delay: 1s; width: 2px; height: 2px; }
+.bg-particles span:nth-child(6) { left: 68%; animation-duration: 26s; animation-delay: 8s; width: 1px; height: 1px; }
+.bg-particles span:nth-child(7) { left: 78%; animation-duration: 24s; animation-delay: 3s; width: 2px; height: 2px; }
+.bg-particles span:nth-child(8) { left: 88%; animation-duration: 32s; animation-delay: 5s; width: 1px; height: 1px; }
+.bg-particles span:nth-child(9) { left: 25%; animation-duration: 27s; animation-delay: 10s; width: 2px; height: 2px; }
+.bg-particles span:nth-child(10) { left: 60%; animation-duration: 23s; animation-delay: 7s; width: 1px; height: 1px; }
+.bg-particles span:nth-child(11) { left: 40%; animation-duration: 29s; animation-delay: 12s; width: 2px; height: 2px; }
+.bg-particles span:nth-child(12) { left: 92%; animation-duration: 21s; animation-delay: 9s; width: 1px; height: 1px; }

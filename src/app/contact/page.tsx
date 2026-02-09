@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import SectionWrapper from "@/components/common/SectionWrapper";
-import PageHeader from "@/components/common/PageHeader";
+import PageContent from "@/components/common/PageContent";
 import ContactForm from "@/components/contact/ContactForm";
 import SocialLinks from "@/components/contact/SocialLinks";
 
@@ -13,11 +13,12 @@ export default function ContactPage() {
   return (
     <>
       <SectionWrapper>
-        <PageHeader
+        <PageContent
           title="Connect"
           subtitle="Get in touch — let's build something together."
-        />
-        <ContactForm />
+        >
+          <ContactForm />
+        </PageContent>
       </SectionWrapper>
       <SectionWrapper>
         <SocialLinks />

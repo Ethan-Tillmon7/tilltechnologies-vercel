@@ -2,9 +2,5 @@
   { "label": "Home", "href": "/", "icon": "FaHome" },
   { "label": "About", "href": "/about", "icon": "FaUser" },
   { "label": "Portfolio", "href": "/portfolio", "icon": "FaCode" },
-  { "label": "Skills", "href": "/skills", "icon": "FaTools" },
-  { "label": "Health", "href": "/health", "icon": "FaHeartbeat" },
-  { "label": "Interests", "href": "/interests", "icon": "FaStar" },
-  { "label": "Travels", "href": "/travels", "icon": "FaGlobeAmericas" },
   { "label": "Connect", "href": "/contact", "icon": "FaEnvelope" }
 ]

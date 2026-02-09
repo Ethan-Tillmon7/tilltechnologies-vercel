@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import PageTransition from "@/components/common/PageTransition";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -23,8 +24,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-background text-text font-lato antialiased">
+        <div className="bg-particles" aria-hidden="true">
+          <span /><span /><span /><span /><span /><span />
+          <span /><span /><span /><span /><span /><span />
+        </div>
         <Header />
-        <main className="min-h-screen pt-16">{children}</main>
+        <main className="min-h-screen pt-16">
+          <PageTransition>{children}</PageTransition>
+        </main>
         <Footer />
       </body>
     </html>

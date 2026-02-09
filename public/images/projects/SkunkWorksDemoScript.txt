@@ -1,0 +1,116 @@
+Skunkworks Demo Script
+Inbox
+Summarize this email
+
+Ethan Tillmon <etillmon7@gmail.com>
+Fri, Aug 4, 2023, 4:44 PM
+to me
+
+A future "Digital front door" option for ACS.
+I recommend recording to your hard drive and then just copying the file over under the ACS Teams Channel.
+You will probably end up recording it a few times so it's really nice.
+Ensure smooth flow (can have it as a document to accompany the demo)
+
+Quick intro
+Overview
+(this is the tool that's going to help you get those goods and services you need, etc.)
+Define scenario cases
+Then going into those different options and "paths" (e.g. thresholds, p cards, contracts, suppliers, etc... Be sure to name the systems like you did in our demo e.g. conga/icontracts coupa/marketplace, etc.)
+
+Make sure you showcase how this allows collection of as much info as we need to do the wor
+
+How it guides the user based on a couple input points and tells them what it takes to get the transaction done
+
+It's a way for a user to express their need with a single intake that guides them to get it done
+
+Missing the following links currently:
+1) Conga Contracts
+2) SSJF Onboarding
+3) Pcard Payment
+
+.........................................
+
+
+Hello team and welcome to the American Cancer Society's guided buying experience!
+
+Allow me to introduce myself; I'm Ethan Tillmon. Today, I will be guiding you through our tool, providing an overview of its functionality, and highlighting how it can prove beneficial to its users.
+
+The purpose of this guided buying experience app is to curate an intuitive journey for users navigating what can often be a complex process, such as expensing goods, events, or services. Our goal is to simplify this process as much as possible, saving our users valuable time.
+
+Our app eliminates the need for users to answer tedious and repetitive questions by having the software address these inquiries on their behalf. After all, nobody enjoys being asked the same questions over and over, especially those that have already been answered.
+
+For instance, let's say you're an employee looking to expense office supplies like staplers or pens. You might wonder if your commodity requires a contract. With our app, you won't have to worry about such details. The experience is designed to be intuitive and reduce as many decisions for the end-user as possible. It handles this kind of information on the user's behalf.
+
+Now that we've covered the tool's general premise, let's dive into how it works and its various functionalities.
+
+We start on the web app's homepage, which greets users with a warm welcome and some introductory text. Below the introduction container, there's a simple search box labeled "ACS Commodity Lookup" and a button to launch the GBE form.
+
+When you click on this search bar, a drop-down menu appears, listing departments organized by name, each with its respective commodities. Users can search through these by typing or navigate with their mouse to click through each department's submenu."
+
+I hope this edited script feels more fluid and easier to follow. It maintains the important information from your original script but enhances readability and flow
+
+*Showcase type search for the first case*
+*Showcase the clear input for the searchbar*
+
+Now lets just go ahead and select a random commodity from here to show off
+
+************
+CASES TO WALK THROUGH:
+
+*Showcase the hint feature and walk through the layout of components
+
+[Yes Contract]
+HR Services => HR Consulting
+ACS Funded < $50,000
+$750
+Contract? Yes
+*if no, then the app will direct them out to Conga Contracts in order to fill out the necessary requests
+*This will redirect the user to fill out an iContract as well as autofill any info field already inputted for better efficiency
+Supplier: Steps Ahead Consulting
+Contract: SOW 8
+PCard? No
+*if yes, then the app will direct them out to easily pay using a P-Card
+Please choose payment method: Write a Request
+
+
+So that we can really see some of the work this does, lets go refresh and go back into the same commodity form and change up the price to
+$5001
+Do you know the supplier? Yes
+Steps Ahead Consulting
+Do you have a contract? Yes
+SOW 8
+Recurring Payment Request
+
+*****************
+[No Contract]
+IT Hardware => IT Peripherals and Accessories
+Federally Funded < $10,000
+
+For this commodity, the price threshold does not matter as much as it isnt p-card elligible in the first place because there is no required contract
+
+$4900
+Do you know the supplier? Yes
+*if no, then the app will direct them out to SSJF onboarding form; however, these current choices have been stored thus will be eventually filled out on the user's behalf
+Supplier: Staples
+Please choose payment method: CDW Punchout
+
+******************
+
+[Yes Contract]
+General Supplies and Service => Print
+ACS Funded < $50,000
+$1500
+Contract? Yes
+Supplier: Whichever
+Contract: Whichever
+Would you like to pay with a p-card? No
+Write a Request
+
+**********************************************************************
+
+Thank you all so much for taking the time to explore this app with me today.
+
+It's been great showing you around and demonstrating some of the key features. We believe that this app has a high ceiling and is just the beginning of something wonderful of which we're excited to continue refining and expanding based on any feedback.
+
+At the end of the day, technology is not about replacing human efforts — it's about enhancing them to make our lives that much easier.
+I hope that what I have shown today provides you with a visual of how this can become a tool that helps you do just that.

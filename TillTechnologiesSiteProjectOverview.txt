@@ -1,0 +1,526 @@
+# TillTechnologies.ai - Portfolio Website Project Scope
+
+## 📋 Project Overview
+
+A modern, interactive portfolio website showcasing your professional work, personal interests, health journey, and life experiences. The site will feature a dark theme with vibrant green accents, interactive components, and seamless integration with third-party services.
+
+---
+
+## 🛠 Recommended Technical Stack
+
+### Core Technologies
+- **Frontend Framework**: React.js (with Next.js for SSR/SSG capabilities)
+- **Styling**: Tailwind CSS + CSS Modules for custom animations
+- **Deployment**: Vercel or Netlify
+- **Version Control**: Git/GitHub
+
+### Additional Libraries
+- **Animations**: Framer Motion
+- **Maps**: Leaflet.js or Mapbox GL JS
+- **Icons**: Font Awesome Pro (you have access)
+- **Image Gallery**: React Photo Album or Lightbox
+- **Typewriter Effect**: react-type-animation or custom implementation
+- **API Integrations**: Strava API, Whoop API (if available)
+
+---
+
+## 🏗 Site Structure & Features
+
+### 1. **Home/Landing Page**
+- Animated 8-bit typewriter header: "Hello World... Welcome to Till Technologies"
+- Brief introduction/tagline
+- Quick navigation to main sections
+- Subtle animated background or gradient
+
+### 2. **About/Biography**
+- Personal introduction
+- Education history
+- Places you've lived (with mini timeline)
+- Professional journey
+- Profile photo
+
+### 3. **Portfolio Projects**
+**Featured Projects:**
+1. Guided Buying Experience (DataMap)
+2. RecyclePlatinum site
+3. Joshinator Analyzer
+4. RAgent
+5. Letter Links
+6. Retro Rumble
+7. (Optional) StyleU
+8. (Optional) Selected class projects
+
+**Each Project Card Should Include:**
+- Project thumbnail/screenshot
+- Title & brief description
+- Tech stack badges
+- Links: Live Demo, GitHub Repo, Case Study (if applicable)
+- "Try It" interactive component where possible
+
+### 4. **Skills & Resume**
+- Interactive skills visualization (skill bars, cloud, or card grid)
+- Categorized skills (Languages, Frameworks, Tools, Soft Skills)
+- Downloadable PDF resume
+- Embedded resume viewer
+
+### 5. **Health & Fitness Hub**
+- **Strava Integration**: Recent activities feed with stats
+- **Marathon Countdown**: Live countdown to Feb 28, 2025 (The Woodlands Marathon)
+- **Whoop Integration**: If API available, display recovery/strain/sleep metrics
+- Personal fitness goals/achievements section
+- Progress charts/visualizations
+
+### 6. **Interests & Hobbies**
+- **Favorites Showcase**:
+  - Top Movies (with posters)
+  - Favorite Books (with covers)
+  - Music Artists/Songs (Spotify embeds if possible)
+  - Favorite Places
+- Grid or carousel layout
+- Optional: Ratings or why you love them
+
+### 7. **Life & Travels**
+- **Interactive World Map**: Push pins on visited locations
+- **Photo Gallery**: Filterable/sortable by location, date, or event
+- **Timeline View**: Life events and travel milestones
+- **Upload Interface**: Admin-only section to add new photos/events
+
+### 8. **Connect/Contact**
+- Social media links (LinkedIn, Instagram, Twitter, GitHub)
+- Contact form (EmailJS or similar)
+- Newsletter signup (optional)
+- Calendar booking link (Calendly integration, optional)
+
+---
+
+## 🎨 Design Specifications
+
+### Color Palette
+```css
+:root {
+  --text: #e9f1e9;        /* rgb(233, 241, 233) - Light text */
+  --background: #020302;   /* rgb(2, 3, 2) - Near-black background */
+  --primary: #42ba40;      /* rgb(66, 186, 64) - Vibrant green */
+  --secondary: #534a64;    /* rgb(83, 74, 100) - Purple-gray */
+  --accent: #1eae19;       /* rgb(30, 174, 25) - Deep green */
+}
+```
+
+### Typography
+- **Header Font**: 8-bit style font (Press Start 2P, VT323, or custom)
+- **Body Font**: Lato (as specified in Realtime Colors)
+- **Code Snippets**: JetBrains Mono or Fira Code
+
+### Animations
+- Typewriter effect on landing page header
+- Smooth scroll behavior
+- Hover effects on cards/buttons
+- Page transition animations
+- Parallax scrolling (optional)
+
+---
+
+## 🔌 Third-Party Integrations
+
+### Required APIs
+1. **Strava API**
+   - OAuth 2.0 authentication
+   - Fetch recent activities
+   - Display distance, pace, elevation
+
+2. **Whoop API** (if available)
+   - Check API availability
+   - Display recovery/strain data
+
+3. **GitHub API**
+   - Fetch repository data for projects
+   - Display stars, forks, last updated
+
+### Optional Integrations
+- **Spotify**: Embed playlists or top tracks
+- **Google Maps/Mapbox**: Interactive travel map
+- **EmailJS**: Contact form functionality
+- **Google Analytics**: Track site visitors
+
+---
+
+## 📅 Development Phases
+
+### **Phase 1: Setup & Foundation** (Week 1)
+- [ ] Initialize Next.js project with TypeScript
+- [ ] Set up Tailwind CSS
+- [ ] Configure ESLint & Prettier
+- [ ] Create folder structure
+- [ ] Set up version control
+- [ ] Design system implementation (colors, typography)
+
+### **Phase 2: Core Pages** (Week 2-3)
+- [ ] Home/Landing page with typewriter animation
+- [ ] About/Biography page
+- [ ] Navigation & routing
+- [ ] Responsive layout foundation
+
+### **Phase 3: Portfolio & Projects** (Week 3-4)
+- [ ] Project showcase components
+- [ ] GitHub integration
+- [ ] Interactive demos/embeds
+- [ ] Case study templates
+
+### **Phase 4: Dynamic Features** (Week 4-5)
+- [ ] Strava API integration
+- [ ] Marathon countdown timer
+- [ ] Whoop integration (if available)
+- [ ] Interactive world map
+- [ ] Photo gallery with upload capability
+
+### **Phase 5: Content & Polish** (Week 5-6)
+- [ ] Populate all content
+- [ ] Optimize images
+- [ ] SEO optimization (meta tags, sitemap)
+- [ ] Performance optimization
+- [ ] Cross-browser testing
+
+### **Phase 6: Deployment** (Week 6)
+- [ ] Environment variables configuration
+- [ ] Production build
+- [ ] Deploy to Vercel/Netlify
+- [ ] Domain setup (TillTechnologies.ai)
+- [ ] SSL certificate
+- [ ] Analytics setup
+
+---
+
+## 📁 Recommended File Structure
+
+```
+tilltechnologies-portfolio/
+├── public/
+│   ├── images/
+│   │   ├── projects/
+│   │   ├── photos/
+│   │   └── profile/
+│   ├── resume/
+│   │   └── Ethan_Tillmon_Resume.pdf
+│   └── fonts/
+│       └── 8bit-fonts/
+├── src/
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Header.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   └── Navigation.tsx
+│   │   ├── home/
+│   │   │   ├── Hero.tsx
+│   │   │   └── TypewriterHeader.tsx
+│   │   ├── about/
+│   │   │   ├── Bio.tsx
+│   │   │   ├── Education.tsx
+│   │   │   └── Timeline.tsx
+│   │   ├── portfolio/
+│   │   │   ├── ProjectCard.tsx
+│   │   │   ├── ProjectGrid.tsx
+│   │   │   └── ProjectDetail.tsx
+│   │   ├── skills/
+│   │   │   ├── SkillBar.tsx
+│   │   │   ├── SkillCloud.tsx
+│   │   │   └── ResumeViewer.tsx
+│   │   ├── health/
+│   │   │   ├── StravaFeed.tsx
+│   │   │   ├── MarathonCountdown.tsx
+│   │   │   └── WhoopStats.tsx
+│   │   ├── interests/
+│   │   │   ├── FavoriteMovies.tsx
+│   │   │   ├── FavoriteBooks.tsx
+│   │   │   └── FavoritePlaces.tsx
+│   │   ├── travels/
+│   │   │   ├── WorldMap.tsx
+│   │   │   ├── PhotoGallery.tsx
+│   │   │   └── LifeTimeline.tsx
+│   │   ├── contact/
+│   │   │   ├── ContactForm.tsx
+│   │   │   └── SocialLinks.tsx
+│   │   └── common/
+│   │       ├── Button.tsx
+│   │       ├── Card.tsx
+│   │       └── Loading.tsx
+│   ├── pages/
+│   │   ├── index.tsx
+│   │   ├── about.tsx
+│   │   ├── portfolio.tsx
+│   │   ├── skills.tsx
+│   │   ├── health.tsx
+│   │   ├── interests.tsx
+│   │   ├── travels.tsx
+│   │   └── contact.tsx
+│   ├── styles/
+│   │   ├── globals.css
+│   │   ├── animations.css
+│   │   └── tailwind.config.js
+│   ├── lib/
+│   │   ├── strava.ts
+│   │   ├── github.ts
+│   │   └── whoop.ts
+│   ├── data/
+│   │   ├── projects.json
+│   │   ├── skills.json
+│   │   ├── interests.json
+│   │   └── travels.json
+│   ├── hooks/
+│   │   ├── useStrava.ts
+│   │   └── useCountdown.ts
+│   └── utils/
+│       ├── formatDate.ts
+│       └── constants.ts
+├── .env.local
+├── .gitignore
+├── package.json
+├── tsconfig.json
+├── next.config.js
+└── README.md
+```
+
+---
+
+## 🚀 Setup Instructions for VS Code
+
+### Step 1: Initialize Project
+
+```bash
+# Create new Next.js app with TypeScript
+npx create-next-app@latest tilltechnologies-portfolio --typescript --tailwind --app
+
+# Navigate to project directory
+cd tilltechnologies-portfolio
+
+# Open in VS Code
+code .
+```
+
+### Step 2: Install Dependencies
+
+```bash
+# Core dependencies
+npm install framer-motion react-icons
+
+# Map integration
+npm install leaflet react-leaflet
+npm install -D @types/leaflet
+
+# Typewriter effect
+npm install react-type-animation
+
+# Image gallery
+npm install react-photo-album yet-another-react-lightbox
+
+# Date utilities
+npm install date-fns
+
+# Form handling
+npm install react-hook-form
+
+# API calls
+npm install axios swr
+```
+
+### Step 3: Configure Environment Variables
+
+Create `.env.local` file:
+```env
+# Strava API
+NEXT_PUBLIC_STRAVA_CLIENT_ID=your_client_id
+STRAVA_CLIENT_SECRET=your_client_secret
+STRAVA_REFRESH_TOKEN=your_refresh_token
+
+# GitHub (if using authenticated API)
+GITHUB_TOKEN=your_github_token
+
+# Whoop API (if available)
+WHOOP_API_KEY=your_api_key
+
+# EmailJS (for contact form)
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+
+# Google Analytics (optional)
+NEXT_PUBLIC_GA_MEASUREMENT_ID=your_measurement_id
+```
+
+### Step 4: Configure Tailwind CSS
+
+Update `tailwind.config.js`:
+```javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        text: '#e9f1e9',
+        background: '#020302',
+        primary: '#42ba40',
+        secondary: '#534a64',
+        accent: '#1eae19',
+      },
+      fontFamily: {
+        pixel: ['"Press Start 2P"', 'cursive'],
+        lato: ['Lato', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+}
+```
+
+### Step 5: Set Up Global Styles
+
+Update `src/app/globals.css`:
+```css
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text: #e9f1e9;
+  --background: #020302;
+  --primary: #42ba40;
+  --secondary: #534a64;
+  --accent: #1eae19;
+}
+
+body {
+  color: var(--text);
+  background: var(--background);
+  font-family: 'Lato', sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+```
+
+### Step 6: VS Code Extensions (Recommended)
+
+Install these extensions for better development experience:
+- **ES7+ React/Redux/React-Native snippets**
+- **Tailwind CSS IntelliSense**
+- **Prettier - Code formatter**
+- **ESLint**
+- **Auto Rename Tag**
+- **Path Intellisense**
+- **GitLens**
+
+### Step 7: Create Initial Component Structure
+
+```bash
+# Create component directories
+mkdir -p src/components/{layout,home,about,portfolio,skills,health,interests,travels,contact,common}
+
+# Create page directories (if using pages router)
+mkdir -p src/pages
+
+# Create data directory
+mkdir -p src/data
+
+# Create lib directory for API integrations
+mkdir -p src/lib
+
+# Create public assets directories
+mkdir -p public/{images/{projects,photos,profile},resume,fonts}
+```
+
+---
+
+## 📝 Next Steps
+
+1. **Set up Strava API credentials**
+   - Go to https://www.strava.com/settings/api
+   - Create an application
+   - Get your Client ID and Client Secret
+   - Generate refresh token
+
+2. **Prepare content**
+   - Write bio/about text
+   - Gather project screenshots
+   - Collect photos for gallery
+   - Update resume PDF
+
+3. **Design mockups** (optional but recommended)
+   - Create wireframes in Figma
+   - Plan component layouts
+   - Test color combinations
+
+4. **Start development**
+   - Begin with Phase 1
+   - Build incrementally
+   - Test frequently
+   - Commit often to Git
+
+---
+
+## 🎯 Key Considerations
+
+### Performance
+- Optimize images (use Next.js Image component)
+- Lazy load components below the fold
+- Minimize bundle size
+- Use static generation where possible
+
+### Accessibility
+- Semantic HTML
+- ARIA labels
+- Keyboard navigation
+- Color contrast ratios
+- Alt text for images
+
+### SEO
+- Meta tags for each page
+- Open Graph tags
+- Structured data (JSON-LD)
+- Sitemap generation
+- robots.txt
+
+### Security
+- Environment variables for API keys
+- Rate limiting on API routes
+- Input validation
+- Content Security Policy headers
+
+---
+
+## 📞 Questions to Resolve
+
+1. Do you have access to Whoop API? (May need to check their developer program)
+2. Do you want admin functionality for photo uploads, or will you update via code?
+3. Preference for map provider: Mapbox (more customizable) or Leaflet (simpler)?
+4. Any specific projects that need special interactive components?
+5. Do you want a blog section for articles/thoughts?
+
+---
+
+Ready to start coding? Begin with Phase 1 setup, then we can tackle each component systematically. Let me know if you need help with any specific component implementation!

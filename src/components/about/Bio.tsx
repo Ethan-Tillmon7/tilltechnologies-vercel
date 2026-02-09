@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import aboutData from "@/data/about.json";
 
@@ -10,16 +11,22 @@ export default function Bio() {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="flex flex-col items-center gap-8 md:flex-row md:items-start"
+      className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left"
     >
-      {/* Profile photo placeholder */}
-      <div className="h-48 w-48 shrink-0 rounded-full border-2 border-primary/30 bg-secondary/20" />
+      <Image
+        src="/images/profile/CompositePicture.png"
+        alt="Ethan Tillmon"
+        width={160}
+        height={160}
+        className="h-40 w-40 shrink-0 rounded-full border-2 border-primary/30 object-cover"
+        priority
+      />
 
       <div>
         <h2 className="mb-4 font-pixel text-sm text-primary sm:text-base">
           About Me
         </h2>
-        <p className="max-w-2xl leading-relaxed text-text/80">
+        <p className="leading-relaxed text-text/80">
           {aboutData.bio}
         </p>
       </div>

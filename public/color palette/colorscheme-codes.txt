@@ -1,0 +1,11 @@
+Your selected colors:
+
+    Text: #e9f1e9 - rgb(233, 241, 233) - hsl(120, 22%, 93%)
+    Background: #020302 - rgb(2, 3, 2) - hsl(120, 20%, 1%)
+    Primary: #42ba40 - rgb(66, 186, 64) - hsl(119, 49%, 49%)
+    Secondary: #534a64 - rgb(83, 74, 100) - hsl(261, 15%, 34%)
+    Accent: #1eae19 - rgb(30, 174, 25) - hsl(118, 75%, 39%)
+
+Realtime Colors link for selected colors: https://www.realtimecolors.com/?colors=e9f1e9-020302-42ba40-534a64-1eae19&fonts=Lato-Lato
+
+Thanks for using RealtimeColors.com!

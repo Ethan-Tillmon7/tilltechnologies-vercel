@@ -23,6 +23,7 @@ export interface Project {
   thumbnailUrl: string;
   githubUrl?: string | null;
   liveUrl?: string | null;
+  demoUrl?: string | null;
   featured: boolean;
   category: "professional" | "personal" | "academic";
   order: number;

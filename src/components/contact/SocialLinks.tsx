@@ -2,14 +2,12 @@
 
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import socialData from "@/data/social.json";
 
 const iconMap: Record<string, React.ReactNode> = {
   FaGithub: <FaGithub size={28} />,
   FaLinkedin: <FaLinkedin size={28} />,
   FaInstagram: <FaInstagram size={28} />,
-  FaXTwitter: <FaXTwitter size={28} />,
 };
 
 export default function SocialLinks() {

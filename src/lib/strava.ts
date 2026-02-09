@@ -6,7 +6,7 @@ const STRAVA_API_BASE = "https://www.strava.com/api/v3";
 
 async function getAccessToken(): Promise<string> {
   const { data } = await axios.post(STRAVA_TOKEN_URL, {
-    client_id: process.env.NEXT_PUBLIC_STRAVA_CLIENT_ID,
+    client_id: process.env.STRAVA_CLIENT_ID,
     client_secret: process.env.STRAVA_CLIENT_SECRET,
     refresh_token: process.env.STRAVA_REFRESH_TOKEN,
     grant_type: "refresh_token",

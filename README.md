@@ -1,5 +1,5 @@
-# Welcome to my personal portfolio site code repository!
-# Fun & cool stuff around here, right?
+# Welcome to my personal portfolio site code repository! Cool stuff around here, right?
+
 # Below is the 'Technical Mumbo-Jumbo'
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 

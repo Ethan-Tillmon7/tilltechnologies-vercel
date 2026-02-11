@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 
@@ -15,23 +15,32 @@ export default function PageHeader({
   subtitle,
   onTypingDone,
 }: PageHeaderProps) {
+  const [mounted, setMounted] = useState(false);
   const [typingDone, setTypingDone] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <div className="mb-12 text-center">
       <h1 className="font-pixel text-2xl text-primary sm:text-3xl md:text-4xl">
-        <TypeAnimation
-          sequence={[
-            title,
-            () => {
-              setTypingDone(true);
-              onTypingDone?.();
-            },
-          ]}
-          wrapper="span"
-          speed={50}
-          cursor={true}
-        />
+        {mounted ? (
+          <TypeAnimation
+            sequence={[
+              title,
+              () => {
+                setTypingDone(true);
+                onTypingDone?.();
+              },
+            ]}
+            wrapper="span"
+            speed={50}
+            cursor={true}
+          />
+        ) : (
+          <span>&nbsp;</span>
+        )}
       </h1>
       {subtitle && (
         <motion.p

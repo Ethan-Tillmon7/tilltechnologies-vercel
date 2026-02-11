@@ -10,12 +10,19 @@ interface CountdownResult {
   isPast: boolean;
 }
 
+const INITIAL: CountdownResult = {
+  days: 0,
+  hours: 0,
+  minutes: 0,
+  seconds: 0,
+  isPast: false,
+};
+
 export function useCountdown(targetDate: string): CountdownResult {
-  const [timeLeft, setTimeLeft] = useState<CountdownResult>(
-    calcTimeLeft(targetDate)
-  );
+  const [timeLeft, setTimeLeft] = useState<CountdownResult>(INITIAL);
 
   useEffect(() => {
+    setTimeLeft(calcTimeLeft(targetDate));
     const timer = setInterval(() => {
       setTimeLeft(calcTimeLeft(targetDate));
     }, 1000);

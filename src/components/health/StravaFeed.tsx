@@ -37,7 +37,7 @@ export default function StravaFeed() {
 
   if (isLoading) return <Loading />;
 
-  if (error || !activities) {
+  if (error || !activities || !Array.isArray(activities)) {
     return (
       <div className="rounded-xl border border-secondary/30 bg-background/50 p-8 text-center">
         <p className="text-text/50">

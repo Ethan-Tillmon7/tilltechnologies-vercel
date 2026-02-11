@@ -34,7 +34,7 @@ export default function Footer() {
             ))}
           </div>
 
-          <p className="text-sm text-text/40">
+          <p className="text-sm text-text/40" suppressHydrationWarning>
             &copy; {new Date().getFullYear()} Ethan Tillmon
           </p>
         </div>

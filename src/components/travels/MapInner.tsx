@@ -5,7 +5,6 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import travelsData from "@/data/travels.json";
 
-// Fix Leaflet default icon issue with bundlers
 const markerIcon = new L.Icon({
   iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
   iconRetinaUrl:
@@ -23,7 +22,7 @@ export default function MapInner() {
       center={[30, -40]}
       zoom={3}
       scrollWheelZoom={true}
-      className="h-[500px] w-full rounded-xl"
+      className="h-[500px] w-full rounded-xl sm:h-[600px]"
       style={{ background: "#020302" }}
     >
       <TileLayer
@@ -35,7 +34,12 @@ export default function MapInner() {
           <Popup>
             <div className="text-background">
               <strong>{loc.name}</strong>
-              {loc.description && <p className="text-sm">{loc.description}</p>}
+              <p className="m-0 text-xs text-gray-600">
+                {loc.state ? `${loc.state}, USA` : loc.country}
+              </p>
+              {loc.description && (
+                <p className="m-0 mt-1 text-sm italic">{loc.description}</p>
+              )}
             </div>
           </Popup>
         </Marker>

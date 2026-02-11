@@ -21,8 +21,8 @@ const goals: FitnessGoal[] = [
   },
   {
     id: "3",
-    title: "Sub-4 Hour Marathon",
-    target: "< 4:00:00",
+    title: "Complete a Half Iron Man",
+    target: "70.3 miles",
     completed: false,
   },
 ];
@@ -31,7 +31,7 @@ export default function FitnessGoals() {
   return (
     <div>
       <h2 className="mb-6 font-pixel text-xs text-primary sm:text-sm">
-        Fitness Goals
+        2026 Fitness Goals
       </h2>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {goals.map((goal, i) => (

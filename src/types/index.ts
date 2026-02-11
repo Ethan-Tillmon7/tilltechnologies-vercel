@@ -111,9 +111,21 @@ export interface TravelLocation {
   lat: number;
   lng: number;
   country: string;
+  state?: string;
+  type: "international" | "domestic";
   visitDate?: string;
   description?: string;
   photos?: string[];
+}
+
+export interface TravelCountry {
+  name: string;
+  cities: string[];
+}
+
+export interface TravelState {
+  name: string;
+  cities: string[];
 }
 
 export interface Photo {

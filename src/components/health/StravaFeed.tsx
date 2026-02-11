@@ -54,7 +54,7 @@ export default function StravaFeed() {
         Recent Activities
       </h2>
       <div className="space-y-4">
-        {activities.map((activity, i) => (
+        {activities.slice(0, 3).map((activity, i) => (
           <motion.div
             key={activity.id}
             initial={{ opacity: 0, x: -20 }}

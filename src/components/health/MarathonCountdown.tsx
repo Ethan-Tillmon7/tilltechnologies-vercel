@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { FaTrophy } from "react-icons/fa";
 import { useCountdown } from "@/hooks/useCountdown";
 
-const MARATHON_DATE = "2025-02-28T07:00:00";
+const MARATHON_DATE = "2026-02-28T07:00:00";
 const MARATHON_NAME = "The Woodlands Marathon";
 
 export default function MarathonCountdown() {
@@ -23,7 +23,7 @@ export default function MarathonCountdown() {
         <h2 className="font-pixel text-sm text-primary sm:text-base">
           Marathon Completed!
         </h2>
-        <p className="mt-2 text-text/60">{MARATHON_NAME} — February 28, 2025</p>
+        <p className="mt-2 text-text/60">{MARATHON_NAME} — February 28, 2026</p>
       </motion.div>
     );
   }

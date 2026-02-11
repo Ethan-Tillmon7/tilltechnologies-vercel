@@ -8,15 +8,17 @@ import type { FavoriteItem } from "@/types";
 import MarathonCountdown from "@/components/health/MarathonCountdown";
 import StravaFeed from "@/components/health/StravaFeed";
 import FitnessGoals from "@/components/health/FitnessGoals";
+import TravelStats from "@/components/travels/TravelStats";
 import WorldMap from "@/components/travels/WorldMap";
 import PhotoGallery from "@/components/travels/PhotoGallery";
 
 const tabs = [
-  { key: "photography", label: "Photography" },
+  { key: "health", label: "Health" },
+  { key: "movies", label: "Movies" },
   { key: "books", label: "Books" },
   { key: "music", label: "Music" },
-  { key: "health", label: "Health" },
   { key: "travels", label: "Travels" },
+  { key: "photography", label: "Photography" },
 ] as const;
 
 type TabKey = (typeof tabs)[number]["key"];
@@ -73,7 +75,7 @@ function ArtistTicker() {
   return (
     <div className="mt-8">
       <p className="mb-3 text-center text-sm text-text/50">
-        {artists.length} artists seen live and counting
+        Artists Seen - 140+ &amp; counting
       </p>
       <div className="overflow-hidden rounded-xl border border-secondary/30 bg-background/50 py-3">
         <div className="animate-ticker flex whitespace-nowrap">
@@ -90,12 +92,7 @@ function ArtistTicker() {
 }
 
 export default function InterestTabs() {
-  const [active, setActive] = useState<TabKey>("photography");
-
-  const isCard = active === "books";
-  const items = isCard
-    ? ((interestsData[active] ?? []) as FavoriteItem[])
-    : [];
+  const [active, setActive] = useState<TabKey>("health");
 
   return (
     <div>
@@ -118,6 +115,102 @@ export default function InterestTabs() {
 
       {/* Content */}
       <AnimatePresence mode="wait">
+        {active === "health" && (
+          <motion.div
+            key="health"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="space-y-10"
+          >
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+              <StravaFeed />
+              <MarathonCountdown />
+            </div>
+            <FitnessGoals />
+          </motion.div>
+        )}
+
+        {active === "movies" && (
+          <motion.div
+            key="movies"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            {((interestsData as Record<string, unknown>).movies as FavoriteItem[] | undefined)?.length ? (
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                {((interestsData as Record<string, unknown>).movies as FavoriteItem[]).map((item, i) => (
+                  <InterestCard key={item.id} item={item} index={i} />
+                ))}
+              </div>
+            ) : (
+              <div className="rounded-xl border border-secondary/30 bg-background/50 p-8 text-center">
+                <p className="text-text/50">
+                  Favorite movies coming soon — stay tuned!
+                </p>
+              </div>
+            )}
+          </motion.div>
+        )}
+
+        {active === "books" && (
+          <motion.div
+            key="books"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+          >
+            {(interestsData.books as FavoriteItem[]).map((item, i) => (
+              <InterestCard key={item.id} item={item} index={i} />
+            ))}
+          </motion.div>
+        )}
+
+        {active === "music" && (
+          <motion.div
+            key="music"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <h3 className="mb-4 font-pixel text-xs text-primary">
+              Favorite Songs
+            </h3>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {(interestsData.music as FavoriteItem[]).map((item, i) => (
+                <InterestCard key={item.id} item={item} index={i} />
+              ))}
+            </div>
+            <ArtistTicker />
+
+            <a
+              href="https://soundcloud.com/thanillmon?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 flex items-center justify-center text-text/50 transition-colors hover:text-primary"
+              aria-label="SoundCloud"
+            >
+              <FaSoundcloud size={22} />
+            </a>
+          </motion.div>
+        )}
+
+        {active === "travels" && (
+          <motion.div
+            key="travels"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="space-y-10"
+          >
+            <TravelStats />
+            <WorldMap />
+            <PhotoGallery />
+          </motion.div>
+        )}
+
         {active === "photography" && (
           <motion.div
             key="photography"
@@ -150,76 +243,6 @@ export default function InterestTabs() {
                 ))}
               </div>
             )}
-          </motion.div>
-        )}
-
-        {active === "music" && (
-          <motion.div
-            key="music"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <h3 className="mb-4 font-pixel text-xs text-primary">
-              Favorite Songs
-            </h3>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {(interestsData.music as FavoriteItem[]).map((item, i) => (
-                <InterestCard key={item.id} item={item} index={i} />
-              ))}
-            </div>
-            <ArtistTicker />
-
-            <a
-              href="https://soundcloud.com/thanillmon?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 flex items-center justify-center gap-2 text-sm text-text/50 transition-colors hover:text-primary"
-            >
-              <FaSoundcloud size={20} />
-              <span>Follow me on SoundCloud</span>
-            </a>
-          </motion.div>
-        )}
-
-        {active === "health" && (
-          <motion.div
-            key="health"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="space-y-10"
-          >
-            <MarathonCountdown />
-            <StravaFeed />
-            <FitnessGoals />
-          </motion.div>
-        )}
-
-        {active === "travels" && (
-          <motion.div
-            key="travels"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="space-y-10"
-          >
-            <WorldMap />
-            <PhotoGallery />
-          </motion.div>
-        )}
-
-        {isCard && (
-          <motion.div
-            key={active}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-          >
-            {items.map((item, i) => (
-              <InterestCard key={item.id} item={item} index={i} />
-            ))}
           </motion.div>
         )}
       </AnimatePresence>

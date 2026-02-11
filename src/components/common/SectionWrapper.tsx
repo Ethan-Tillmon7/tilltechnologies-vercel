@@ -15,7 +15,7 @@ export default function SectionWrapper({
   id,
 }: SectionWrapperProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
     <motion.section

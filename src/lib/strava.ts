@@ -5,6 +5,14 @@ const STRAVA_TOKEN_URL = "https://www.strava.com/oauth/token";
 const STRAVA_API_BASE = "https://www.strava.com/api/v3";
 
 async function getAccessToken(): Promise<string> {
+  if (
+    !process.env.STRAVA_CLIENT_ID ||
+    !process.env.STRAVA_CLIENT_SECRET ||
+    !process.env.STRAVA_REFRESH_TOKEN
+  ) {
+    throw new Error("Strava credentials not configured");
+  }
+
   const { data } = await axios.post(STRAVA_TOKEN_URL, {
     client_id: process.env.STRAVA_CLIENT_ID,
     client_secret: process.env.STRAVA_CLIENT_SECRET,

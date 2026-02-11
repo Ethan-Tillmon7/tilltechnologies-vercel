@@ -32,7 +32,7 @@ export default function ResumeViewer() {
         <Button
           variant="outline"
           size="sm"
-          href="/resume/Resum%C3%A9%20v1.3.Square.pdf"
+          href="/resume/resume.pdf"
         >
           <FaDownload /> Download PDF
         </Button>
@@ -51,7 +51,7 @@ export default function ResumeViewer() {
             <div className="px-6 pb-6">
               <div className="overflow-hidden rounded-lg border border-secondary/20">
                 <iframe
-                  src="/resume/Resum%C3%A9%20v1.3.Square.pdf"
+                  src="/resume/resume.pdf"
                   className="h-[600px] w-full"
                   title="Resume"
                 />

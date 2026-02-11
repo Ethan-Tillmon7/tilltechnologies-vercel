@@ -1,5 +1,6 @@
 {
   "photography": [],
+  "movies": [],
   "books": [
     { "id": "b1", "title": "Catch-22", "subtitle": "Joseph Heller", "imageUrl": "/images/interests/catch-22.jpg", "category": "book" },
     { "id": "b2", "title": "The Catcher in the Rye", "subtitle": "J.D. Salinger", "imageUrl": "/images/interests/catcher-rye.jpg", "category": "book" },

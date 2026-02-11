@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
+import { useGitHubRepos } from "@/hooks/useGitHub";
 import projectsData from "@/data/projects.json";
 import type { Project } from "@/types";
 
@@ -11,6 +12,7 @@ const categories = ["all", "professional", "personal", "academic"] as const;
 
 export default function ProjectGrid() {
   const [filter, setFilter] = useState<string>("all");
+  const { repos } = useGitHubRepos();
 
   const filtered =
     filter === "all"
@@ -43,7 +45,7 @@ export default function ProjectGrid() {
       >
         <AnimatePresence>
           {filtered.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i} />
+            <ProjectCard key={project.id} project={project} index={i} repoInfo={repos[project.id]} />
           ))}
         </AnimatePresence>
       </motion.div>

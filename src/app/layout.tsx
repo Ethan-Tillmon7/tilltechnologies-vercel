@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import PageTransition from "@/components/common/PageTransition";
+import Analytics from "@/components/common/Analytics";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-background text-text font-lato antialiased">
+        <Analytics />
         <div className="bg-particles" aria-hidden="true">
           <span /><span /><span /><span /><span /><span />
           <span /><span /><span /><span /><span /><span />

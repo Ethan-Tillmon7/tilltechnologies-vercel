@@ -3,6 +3,7 @@ import type { StravaActivity } from "@/types";
 
 const fetcher = (url: string) =>
   fetch(url).then((res) => {
+    if (res.status === 503) return null; // Not configured
     if (!res.ok) throw new Error(`Strava API error: ${res.status}`);
     return res.json();
   });

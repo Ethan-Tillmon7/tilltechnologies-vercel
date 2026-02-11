@@ -13,13 +13,24 @@ async function getAccessToken(): Promise<string> {
     throw new Error("Strava credentials not configured");
   }
 
-  const { data } = await axios.post(STRAVA_TOKEN_URL, {
-    client_id: process.env.STRAVA_CLIENT_ID,
-    client_secret: process.env.STRAVA_CLIENT_SECRET,
-    refresh_token: process.env.STRAVA_REFRESH_TOKEN,
-    grant_type: "refresh_token",
-  });
-  return data.access_token;
+  try {
+    const { data } = await axios.post(STRAVA_TOKEN_URL, {
+      client_id: process.env.STRAVA_CLIENT_ID,
+      client_secret: process.env.STRAVA_CLIENT_SECRET,
+      refresh_token: process.env.STRAVA_REFRESH_TOKEN,
+      grant_type: "refresh_token",
+    });
+    return data.access_token;
+  } catch (err: unknown) {
+    if (axios.isAxiosError(err) && err.response) {
+      console.error(
+        `Strava token refresh failed: ${err.response.status}`,
+        err.response.data
+      );
+      throw new Error(`Strava token refresh failed: ${err.response.status}`);
+    }
+    throw err;
+  }
 }
 
 export async function getRecentActivities(

@@ -138,6 +138,15 @@ export interface Photo {
   tags?: string[];
 }
 
+// GitHub
+export interface GitHubRepoInfo {
+  stars: number;
+  forks: number;
+  language: string | null;
+  updatedAt: string;
+  openIssues: number;
+}
+
 // Contact
 export interface ContactFormData {
   name: string;

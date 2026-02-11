@@ -3,18 +3,19 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt, FaPlay } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaPlay, FaStar } from "react-icons/fa";
 import Badge from "@/components/common/Badge";
 import GlitchText from "@/components/common/GlitchText";
 import TiltCard from "@/components/common/TiltCard";
-import type { Project } from "@/types";
+import type { Project, GitHubRepoInfo } from "@/types";
 
 interface ProjectCardProps {
   project: Project;
   index: number;
+  repoInfo?: GitHubRepoInfo;
 }
 
-export default function ProjectCard({ project, index }: ProjectCardProps) {
+export default function ProjectCard({ project, index, repoInfo }: ProjectCardProps) {
   const [imgError, setImgError] = useState(false);
   return (
     <motion.div
@@ -91,7 +92,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             ))}
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex items-center gap-3">
             {project.githubUrl && (
               <a
                 href={project.githubUrl}
@@ -101,6 +102,14 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               >
                 <FaGithub /> Code
               </a>
+            )}
+            {repoInfo && repoInfo.stars > 0 && (
+              <span className="flex items-center gap-1 text-sm text-text/40">
+                <FaStar className="text-yellow-500" /> {repoInfo.stars}
+              </span>
+            )}
+            {repoInfo?.language && (
+              <span className="text-xs text-text/30">{repoInfo.language}</span>
             )}
             {project.liveUrl && (
               <a

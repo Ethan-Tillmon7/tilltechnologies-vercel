@@ -8,6 +8,17 @@ let cacheExpiry = 0;
 const CACHE_TTL = 15 * 60 * 1000; // 15 minutes
 
 export async function GET() {
+  if (
+    !process.env.STRAVA_CLIENT_ID ||
+    !process.env.STRAVA_CLIENT_SECRET ||
+    !process.env.STRAVA_REFRESH_TOKEN
+  ) {
+    return NextResponse.json(
+      { error: "Strava not configured", unconfigured: true },
+      { status: 503 }
+    );
+  }
+
   try {
     const now = Date.now();
 
